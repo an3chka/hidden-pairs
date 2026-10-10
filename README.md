@@ -65,17 +65,17 @@ easier to explain.
 | File | Contents |
 |---|---|
 | `hidden_pairs_clean.ipynb` | Full pipeline: data, models, Optuna tuning, ensemble, submissions |
+| `week-03-hidden-pairs/` | Competition data: `train.csv`, `validation.csv`, `test.csv` (unlabeled), `sample_submission.csv` |
 | `results/experiments.csv` | Experiment table: model, features, CV / validation ROC-AUC, runtime, seed |
 | `hidden_pairs_presentation.pdf` | Slides for the project defense |
 | `requirements.txt` | Library versions |
 
 ## How to run
 
-The competition data are private and, under the course rules, may not be published,
-so they are not included in this repository. To reproduce the results:
+The competition data are included in `week-03-hidden-pairs/` (published with the
+instructor's permission). To reproduce the results:
 
-1. Put `train.csv`, `validation.csv`, `test.csv` and `sample_submission.csv`
-   into a `week-03-hidden-pairs/` folder next to the notebook.
+1. Clone the repository: the notebook reads the data from `week-03-hidden-pairs/`.
 2. Install dependencies: `pip install -r requirements.txt` (Python 3.12+).
 3. Restart the kernel and run all cells (~3 minutes on a 12-core CPU).
 
@@ -105,7 +105,6 @@ and PyTorch runs on CPU, so reruns produce identical predictions.
 - второе решение — ансамбль с подобранными весами; по качеству он равен одной SVM, поэтому
   выбрана более простая модель.
 
-**Данные** соревнования закрытые и по правилам курса не публикуются, поэтому их нет
-в репозитории. Для запуска положите `train.csv`, `validation.csv`, `test.csv`
-и `sample_submission.csv` в папку `week-03-hidden-pairs/` рядом с ноутбуком,
-установите зависимости (`pip install -r requirements.txt`) и выполните Restart → Run All.
+**Данные** соревнования лежат в папке `week-03-hidden-pairs/` (выложены с разрешения
+преподавателя). Для запуска установите зависимости (`pip install -r requirements.txt`)
+и выполните Restart → Run All.
